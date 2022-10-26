@@ -1,0 +1,27 @@
+{"tasks":[
+    {
+        "id":1,
+        "text": "Ser estafado por Khtot",
+        "day": "Agosto 5 a las 12:00",
+        "reminder":true
+    },
+    {
+        "id":2,
+        "text": "No poder comprar par de zapatillas",
+        "day": "Agosto 5 a las 12:00",
+        "reminder":true
+    },
+    {
+        "id":3,
+        "text": "Descender a plata 2",
+        "day": "Agosto 5 a las 12:00",
+        "reminder":false
+    },
+    {
+        "id":3,
+        "text": "Robar baron",
+        "day": "Agosto 5 a las 12:00",
+        "reminder":false
+    }
+]
+}
