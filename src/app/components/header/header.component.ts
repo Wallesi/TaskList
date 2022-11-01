@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UiServiceService } from 'src/app/service/ui.service.service';
+import { Subscription } from 'rxjs';
 
 
 @Component({
@@ -8,13 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   title = 'My Task List';
+  showAddTask:boolean = true;
+  subscription?: Subscription; //la wea fome rara aca 
 
-  constructor() { }
+  constructor(
+    private uiServiceService: UiServiceService
+  ) { 
+    this.subscription = this.uiServiceService.onToggle().subscribe(value=>this.showAddTask=value)//Con esto al clickear el boton cambiar de estado de true a false y vicebersa
+  }
 
   ngOnInit(): void {
   }
 
   toggleAddTask(){
-    console.log("toggleAddTask");
+    this.uiServiceService.toggleAddTask();
   }
 }
